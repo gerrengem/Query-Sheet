@@ -1,0 +1,13 @@
+=QUERY(
+  {
+    QUERY(
+      'Import Odoo Repair GEM'!A2:K, 
+      "Select * where Col1 is not null"
+    );
+    QUERY(
+      'Import Odoo Repair Trans'!A2:K, 
+      "Select * where Col1 is not null"
+    )
+  },
+  "Select *"
+)
