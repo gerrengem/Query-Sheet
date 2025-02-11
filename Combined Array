@@ -11,3 +11,17 @@
   },
   "Select *"
 )
+
+
+=query(
+  {
+    Query(
+      'CombinedData'!A:Z,
+      "Select Col2, Col3,Col4*-1, Col5, Col6, Col7,Col11, Col12,Col13 label Col4*-1 'Done QTY',Col11 'Driver', Col12 'Licence Plate', Col13 'Account'"
+    );
+    Query(
+       importrange("1mBcoWDkjF4TuF0K-qoLiLI2SVhciFGBvTtcbJU904gY","'Repair'!A2:M"),"Select * Where Col1 is not null"
+    )
+  },
+  "Select *"
+)
