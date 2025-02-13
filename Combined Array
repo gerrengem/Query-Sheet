@@ -12,16 +12,18 @@
   "Select *"
 )
 
-
+# 
 =query(
   {
     Query(
-      'CombinedData'!A:Z,
-      "Select Col2, Col3,Col4*-1, Col5, Col6, Col7,Col11, Col12,Col13 label Col4*-1 'Done QTY',Col11 'Driver', Col12 'Licence Plate', Col13 'Account'"
+      importrange("19zxBNl94hOEUa6rxGc_Sm16W0jopmAdIMgy3VFWeogk","Data!A1:AF10000"), "select * where Col1 is not null",1
     );
     Query(
-       importrange("1mBcoWDkjF4TuF0K-qoLiLI2SVhciFGBvTtcbJU904gY","'Repair'!A2:M"),"Select * Where Col1 is not null"
-    )
+      'Pending Trip'!A2:AF1000, "select * where Col1 is not null"
+    );
+    Query(
+       importrange("1iVaK7-gXSTWUtkMjvBorpsj4EE8srF7s8jhY2NlcuoU","Data!A2:AF10086"),"Select * Where Col1 is not null AND Col25 contains '2025'"
+ )
   },
-  "Select *"
+  "Select *",1
 )
